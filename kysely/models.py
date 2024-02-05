@@ -16,7 +16,7 @@ class Kysymys(models.Model):
 class Vaihtoehto(models.Model):
     kysymys = models.ForeignKey(Kysymys, on_delete=models.CASCADE)
     teksti = models.CharField(max_length=200)
-    äänet = models.IntegerField(default=0)
+    ääniä = models.IntegerField(default=0)
 
     class Meta:
         verbose_name = "vaihtoehto"
