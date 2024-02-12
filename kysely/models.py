@@ -15,7 +15,8 @@ class Kysymys(models.Model):
         return self.teksti
 
     def onko_julkaistu_lähiaikoina(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        nyt = timezone.now()
+        return nyt - datetime.timedelta(days=1) <= self.julkaisupvm <= nyt
 
 
 class Vaihtoehto(models.Model):
