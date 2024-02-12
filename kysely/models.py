@@ -3,6 +3,7 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
+
 class Kysymys(models.Model):
     teksti = models.CharField(max_length=200)
     julkaisupvm = models.DateTimeField("julkaistu")
