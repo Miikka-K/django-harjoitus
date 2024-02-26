@@ -1,8 +1,6 @@
-{% load static %}
-<html>
-<body>
+{% extends 'kysely/base.html' %}
 
-<link rel="stylesheet" href="{% static 'kysely/tyylit.css' %}">
+{% block content %}
 
 {% if kysymykset %}
     <ul>
@@ -14,5 +12,4 @@
     <p>Ei kyselyitä saatavilla.</p>
 {% endif %}
 
-</body>
-</html>
+{% endblock %}
