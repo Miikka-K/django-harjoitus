@@ -21,3 +21,4 @@ class KysymysAdmin(admin.ModelAdmin):
 @admin.register(Vaihtoehto)
 class VaihtoehtoAdmin(admin.ModelAdmin):
     list_display = ["kysymys", "teksti"]
+    search_fields = ["teksti", "kysymys__teksti"]
